@@ -1,0 +1,3 @@
+* scene ambient color 0x004000
+* life of flat
+* smooth shading - check TetrameshAsTrimesh.qml -> Trimesh -> why not uses shading=2 from ext material

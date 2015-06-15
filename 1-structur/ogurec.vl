@@ -1,0 +1,151 @@
+Scene  {
+    text: "Структура огурца"
+
+    info: "Отображение тетраэдральной сетки сердечного желудочка. Укажите файл в формате GEO.<br>
+         Двойной клик на изображении - выбрать тетраэдр.
+  "
+
+    id: theScene
+
+    property alias file: fs.file
+    FileParam {
+        text: "Укажите файл *.GEO"
+        property var tag: "left"
+        id: fs
+        visible: false
+        value: Qt.resolvedUrl( "0.geo" )
+        //value: Qt.resolvedUrl( "231.geo" )
+    }
+
+    Param {
+        id: wireParam
+        title: "wire on"
+        values: ["нет","да"]
+    }
+    Param {
+        id: oParam
+        title: "opacity"
+        min:0
+        max:100
+        value:83
+    }
+
+  Param {
+    id: pCustom1
+    text: "custom 1"
+    min: 0
+    max: 500
+    value: 200
+  }  
+
+  Param {
+    id: pCustom2
+    text: "custom 2"
+    min: 0
+    max: 500
+    value: 200
+  }    
+
+    TetrameshGeoLoad {
+        //src: "init0.geo"
+        src: Qt.resolvedUrl( fs.file )
+        id: tetra
+
+            TetrameshZFilter2 {
+                id: tetraz
+                zParam.value: 50
+              //TetrameshRotate {
+           
+                TetrameshAsTrimesh  {
+                    title: "Main body of zheludochek after ZFilter"
+                    id:tetra
+                    opacity: oParam.value/100
+                    wireon: wireParam.value > 0
+                    visible: oParam.value > 0
+                    color: [1,1,1]
+                    //color: [0,1,0]
+                    //color: 0x3cb371 //0x66cdaa
+                    //color: 0xffffff
+                    // shading: paramShading.value
+
+                    //Component.onCompleted: {
+                    //  debugger;	
+                    //}
+                    
+                    materials: [p1]
+                    TheMaterial {
+								      id: p1
+								      shading: 2
+								      metal: true
+								      //shine: pShine.value
+											//      emissive: 0xffff00
+											//      color: 0xff0000
+											//      specular:0xff0000
+								    }
+								    /*
+								    LambertMaterial {
+								      id: p2
+								      color: [1,1,1]
+								      //shading: 2
+											//      emissive: 0xffff00
+											//      color: 0xff0000
+											//      specular:0xff0000
+								    }
+								    */
+
+                }
+
+                TetrameshCenters {
+                    Points {
+                        RadiusParam { 
+                          value: 20
+                          mult:5
+                          text: "размер ядрышек"
+                        }
+                        color: [1,0,0]
+                    }
+                }
+
+            } // zfilter
+         //} // rot
+
+    } // geoload
+
+    /////////////// Работа с выбором 
+    
+    property var selectedTetra
+    onSelectedTetraChanged: {
+      selTetraCombo.selected = selectedTetra;
+    }
+
+    TetraComboChooser {
+      id: selTetraCombo
+      source: tetra
+      onSelectedChanged: selectedTetra = selected;
+      seltetra.color: [1,0,1]
+      tetrap.text: "Выбранная ячейка"
+    }
+
+    TetraMouseChooser {
+      id: selTetraMouse
+      source: tetra
+      onSelectedChanged: {
+        selectedTetra = selected;
+        //selectedTetra = (selected === null ? -1 : tetraz.originalTetraNumbers[ selected ])
+      }
+      //enabled: false
+      //togetherWith: [selPointMouse,selTetraMouseHilited ]
+    }
+
+    ///////////////////////////////////////////////////////////////////////
+  
+    sceneColor: 0x006000
+
+    Param {
+        id: oCal
+        title: "цветность огурца"
+        value: 40
+        onValueChanged: theScene.sceneColor = [0,value/100,0]
+    }    
+      
+}
