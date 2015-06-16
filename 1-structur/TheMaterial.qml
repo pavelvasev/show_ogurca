@@ -2,8 +2,8 @@ PhongMaterial {
     id: p1
 
     property real time: theScene.sceneTime
-    property real custom1: pCustom1.value / 100
-    property real custom2: pCustom2.value
+    property real custom1: pCustom1.value / 20 // теперь custom1 и custom2 от 0 до 5
+    property real custom2: pCustom2.value / 20
 
     vertexShader: "
         // your things
@@ -21,7 +21,7 @@ PhongMaterial {
           // MAIN CODE BEGIN
           //float zz = position.z * sin(time*custom2/400.0);
           float zz = position.z;
-          vec3 newposition = vec3(position.x + sin(time), position.y + cos(time * custom1), zz);
+          vec3 newposition = vec3(position.x + sin(time)*custom2, position.y + cos(time * custom1) * custom2, zz);
   
           // MAIN CODE END
         
