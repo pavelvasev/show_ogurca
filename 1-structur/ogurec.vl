@@ -30,21 +30,6 @@ Scene  {
         value:83
     }
 
-  Param {
-    id: pCustom1
-    text: "custom 1"
-    min: 0
-    max: 100
-    value: 20
-  }  
-
-  Param {
-    id: pCustom2
-    text: "custom 2"
-    min: 0
-    max: 100
-    value: 20
-  }    
 
     TetrameshGeoLoad {
         //src: "init0.geo"
@@ -147,5 +132,24 @@ Scene  {
         value: 40
         onValueChanged: theScene.sceneColor = [0,value/100,0]
     }    
+
+    /////////////////////////////////// параметры для шейдера
+
+  Param {
+    id: pCustom1
+    text: "custom 1"
+    min: 0
+    max: 100
+    value: 20
+  }  
+
+  Param {
+    id: pCustom2
+    text: "custom 2"
+    min: 0
+    max: 100
+    value: 20
+  }    
+    
       
 }
