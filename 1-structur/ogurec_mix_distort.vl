@@ -1,0 +1,12 @@
+import "https://github.com/pavelvasev/distort_mixer"
+import "."
+
+Ogurec {
+
+  DistortMixer {
+    id: mix
+  }
+
+  shader: mix.shader
+
+}

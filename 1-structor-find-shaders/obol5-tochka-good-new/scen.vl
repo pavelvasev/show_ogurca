@@ -1,0 +1,93 @@
+// Славина оригинальная версия
+
+import components.show_points
+
+Scene {
+id: theScene
+
+    MyShader {
+      id: sh
+    }
+
+  
+//ShowPointsApp {
+  Points {
+    id: p
+    positions: d2.output
+    shader: sh
+    radius: 7
+
+//radius:1
+
+    colors: {
+      var res = [];
+      var arr=positions;
+      for (var i=0; i<arr.length; i+=3) {
+        var xx = arr[3*i];
+        var yy = arr[3*i+1];
+        var zz = arr[3*i+2];
+        //res.push( 1 );res.push( 1 );res.push( 0 );
+        
+        if (xx*xx + yy*yy > 10) {
+          res.push( 0 );res.push( 0 );res.push( 1 );
+        }
+        else
+        {
+          res.push( 1 );res.push( 0 );res.push( 0 );
+        }
+        
+      }
+      console.log("rrrrrr=",res);
+      return res;
+    }
+  }
+  
+  CsvLoader {
+    file: Qt.resolvedUrl("coord.txt")
+    id:dat
+    Flatten {
+      id: d2
+    }
+  }
+
+  TrimeshOnPoints {
+    pt: p
+    id: trimesh
+    file: Qt.resolvedUrl("triangles.txt")
+    shader: sh
+  }
+
+  Param {
+    id: pCustom1
+    text: "custom 1 -- radius"
+    min: 0
+    max: 100
+    value: 20
+  }  
+
+  Param {
+    id: pCustom2
+    text: "custom 2 -- center"
+    min: -50
+    max: 150
+    step: 0.5
+    value: 2
+  }
+
+  Param {
+    id: pCustom3
+    text: "custom 3 -- POW"
+    min: 0
+    max: 5
+    step: 0.1
+    value: 2
+  }  
+                Spheres {
+ //              Points { 
+                  positions: [0,0,pCustom2.value]
+                  radius: pCustom1.value ///2
+                  wire: true
+                }
+
+
+}

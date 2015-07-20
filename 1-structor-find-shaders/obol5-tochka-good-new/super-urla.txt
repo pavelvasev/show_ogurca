@@ -1,0 +1,14 @@
+file:///D:/viewlang_sync/viewlanging/viewlang/scene.html?s--file://D:\viewlang_sync\viewlanging\projects\show_ogurca\1-structur\obol5-tochka-good-new\scen.vl#{"params":{"cameraPos":[1.8041415606001325,-993.256888710202,77.46168641867156],"raskrasit-treugolniki":1,"cameraCenter":[1.3701857543500362,9.468671339266923,22.209853122625557],"custom-1----radius":22,"custom-3----POW":5,"custom-2----center":46,"tochko-sfery--tip-otobrazheniya":0,"prozrachnost-treugolnikov":100}}
+
+file:///D:/viewlang_sync/viewlanging/viewlang/scene.html?s--file://D:\viewlang_sync\viewlanging\projects\show_ogurca\1-structur\obol5-tochka-good-new\scen.vl#{"params":{"cameraPos":[28.91431352401249,74.5759365206722,1023.965246031866],"raskrasit-treugolniki":1,"cameraCenter":[1.3701857543500362,9.468671339266923,22.209853122625557],"custom-1----radius":26,"custom-3----POW":5,"custom-2----center":46,"tochko-sfery--tip-otobrazheniya":0,"prozrachnost-treugolnikov":100}}
+
+file:///D:/viewlang_sync/viewlanging/viewlang/scene.html?s--file://D:\viewlang_sync\viewlanging\projects\show_ogurca\1-structur\obol5-tochka-good-new\ogurec.vl#{"params":{"cameraPos":[-1.1271842255319244,-121.57309868889948,131.92092678856378],"custom-3----POW":4.1,"custom-2----center":40,"custom-1----radius":29,"razmer-yadryshek":4,"opacity":83,"cameraCenter":[0.8791441952591624,21.190321987935015,29.752591111792817]}}
+
+* исходное - крутить радиус
+http://viewlang.ru/viewlang/scene.html?s--http://viewlang.ru/projects/show_ogurca/1-structur/obol5-tochka-good-new/scen.vl#{"params":{"cameraPos":[1.3701857535843012,-992.2639041428612,93.22639622830681],"raskrasit-treugolniki":1,"cameraCenter":[1.3701857543500362,9.468671339266923,22.209853122625557],"custom-1----radius":23,"custom-3----POW":5,"custom-2----center":46,"tochko-sfery--tip-otobrazheniya":0,"prozrachnost-treugolnikov":100}}
+
+сидим внутри шара - отодвинуть камеру назад колесиком
+http://viewlang.ru/viewlang/scene.html?s--http://viewlang.ru/projects/show_ogurca/1-structur/obol5-tochka-good-new/scen.vl#{"params":{"cameraPos":[3.643610635193418,-199.66963745072013,-16.642951565296023],"raskrasit-treugolniki":1,"cameraCenter":[3.0524505486323847,14.376711428613143,58.62434065846339],"custom-1----radius":44,"custom-3----POW":5,"custom-2----center":26,"tochko-sfery--tip-otobrazheniya":0,"prozrachnost-treugolnikov":100}}
+
+* крутить центр
+http://viewlang.ru/viewlang/scene.html?s--http://viewlang.ru/projects/show_ogurca/1-structur/obol5-tochka-good-new/scen.vl#{"params":{"cameraPos":[-15.133125205608929,-810.0580036518886,720.0175321447595],"raskrasit-treugolniki":1,"cameraCenter":[3.0524505486323847,14.376711428613143,58.62434065846339],"custom-1----radius":78,"custom-3----POW":2.5,"custom-2----center":36,"tochko-sfery--tip-otobrazheniya":0,"prozrachnost-treugolnikov":100,"karkas":1}}

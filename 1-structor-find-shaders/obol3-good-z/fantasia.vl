@@ -1,0 +1,22 @@
+Scene {
+
+  ShowPointsApp {
+    id: pts
+    shader: sh
+  }
+
+  TrimeshOnPoints {
+    shader: sh
+  }
+  
+  Shader {
+    id: sh
+    
+    vertex: "
+    "
+    
+    fragment: "
+    "
+  }
+  
+}

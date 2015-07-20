@@ -1,0 +1,74 @@
+// Славина оригинальная версия
+
+import components.show_points
+
+Scene {
+id: theScene
+  
+ShowPointsApp {
+//  Points {
+    id: p
+    positions: d2.output
+
+//radius:1
+
+    colors: {
+      var res = [];
+      var arr=positions;
+      for (var i=0; i<arr.length; i+=3) {
+        var xx = arr[3*i];
+        var yy = arr[3*i+1];
+        var zz = arr[3*i+2];
+        //res.push( 1 );res.push( 1 );res.push( 0 );
+        
+        if (xx*xx + yy*yy > 10) {
+          res.push( 0 );res.push( 0 );res.push( 1 );
+        }
+        else
+        {
+          res.push( 1 );res.push( 0 );res.push( 0 );
+        }
+        
+      }
+      console.log("rrrrrr=",res);
+      return res;
+    }
+  }
+  
+  CsvLoader {
+    file: Qt.resolvedUrl("coord.txt")
+    id:dat
+    Flatten {
+      id: d2
+    }
+  }
+
+  TrimeshOnPoints {
+    pt: p
+    id: trimesh
+    file: Qt.resolvedUrl("triangles.txt")
+  }
+
+  Param {
+    id: pCustom1
+    text: "custom 1 -- mult"
+    min: 0
+    max: 100
+    value: 20
+  }  
+
+  Param {
+    id: pCustom2
+    text: "custom 2 -- center"
+    min: -20
+    max: 50
+    step: 0.1
+    value: 2
+  }    
+                Points {
+                  positions: [0,0,pCustom2.value]
+                  radius:4
+                }
+
+
+}
