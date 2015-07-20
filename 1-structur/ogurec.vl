@@ -51,6 +51,7 @@ Scene  {
                     wireon: wireParam.value > 0
                     visible: oParam.value > 0
                     color: [1,1,1]
+                    ///color: sceneColor2
                     //color: [0,1,0]
                     //color: 0x3cb371 //0x66cdaa
                     //color: 0xffffff
@@ -131,7 +132,12 @@ Scene  {
 
     ///////////////////////////////////////////////////////////////////////
   
-    sceneColor: 0x006000
+    property var sceneColor2: 0x006000
+    Binding {
+      target: theScene.rootScene
+      property: "sceneColor"
+      value: sceneColor2
+    }
 
     Param {
         id: oCal
