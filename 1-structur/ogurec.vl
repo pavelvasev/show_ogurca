@@ -143,7 +143,7 @@ Scene  {
         id: oCal
         title: "цветность огурца"
         value: 40
-        onValueChanged: theScene.sceneColor = [0,value/100,0]
+        onValueChanged: theScene.sceneColor2 = [0,value/100,0]
     }    
 
     /////////////////////////////////// шейдер тряски
