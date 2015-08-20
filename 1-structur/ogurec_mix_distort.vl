@@ -1,7 +1,7 @@
 import "https://github.com/pavelvasev/distort_mixer"
 import "."
 
-Ogurec {
+OgurecCreative {
 
   DistortMixer {
     id: mix

@@ -1,9 +1,15 @@
+import components.creative_points
+
 Scene  {
     text: "Структура огурца"
 
     info: "Отображение тетраэдральной сетки сердечного желудочка. Укажите файл в формате GEO.<br>
          Двойной клик на изображении - выбрать тетраэдр.
-  "
+    "
+
+    BackgroundImageUser {
+      ctag: "right"
+    }
   
 
     id: theScene
@@ -89,6 +95,12 @@ Scene  {
                 }
 
                 TetrameshCenters {
+                    CreativePoints {
+                      color: [1,0,0]
+                      radius:1
+                      radiusMax:25
+                    }
+                    /*
                     Points {
                         RadiusParam { 
                           value: 1
@@ -97,6 +109,7 @@ Scene  {
                         }
                         color: [1,0,0]
                     }
+                    */
                 }
 
             } // zfilter
