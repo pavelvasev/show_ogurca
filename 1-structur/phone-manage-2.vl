@@ -1,6 +1,9 @@
 Scene {
   // file:///D:/viewlang_sync/release/code/scene.html?s--file://D:\viewlang_sync\superviewlang2\vl_window.qml&viewlangscene--file://D:\viewlang_sync\viewlanging\projects\show_ogurca\1-structur\ogurec_mix_distort.vl#{"params":{"cameraPos":[-5.052410941243772,-1.0314368790840582,47.37141010840162],"cameraCenter":[-4.293400002743568,-1.1668366044814802,45.2644208829819],"fixedmix/appname":3,"fixedmix/Distort-ZAxis-Radius":39,"fixedmix/Distort-ZAxis-POW":1.6,"fixedmix/3/Morphing":1.100000023841858,"fixedmix/Distort-ZAxis-sphere":1,"osc":true,"fixedmix/Distort-ZPoint-POW":1.7,"fixedmix/Distort-ZPoint-Radius":18,"fixedmix/Distort-ZPoint-Center":-50,"radius":1.5,"bPoints-paramsb-texture":1,"cvet":"0.39 0.84 1"}}
   // file:///D:/viewlang_sync/release/code/scene.html?s--file://D:\viewlang_sync\superviewlang2\vl_window.qml&viewlangscene--file://D:\viewlang_sync\viewlanging\projects\show_ogurca\1-structur\ogurec_mix_distort.vl#{"params":{"cameraPos":[-5.088960825716354,5.452598984049089,101.70857389684647],"cameraCenter":[-2.170457244360579,1.844262370765523,42.09755396528831],"fixedmix/appname":3,"fixedmix/Distort-ZAxis-Radius":39,"fixedmix/Distort-ZAxis-POW":1.6,"fixedmix/3/Morphing":1.100000023841858,"fixedmix/Distort-ZAxis-sphere":1,"osc":true,"fixedmix/Distort-ZPoint-POW":1.7,"fixedmix/Distort-ZPoint-Radius":18,"fixedmix/Distort-ZPoint-Center":-50,"radius":1.5,"bPoints-paramsb-texture":1,"cvet":"0.39 0.84 1"}}
+
+
+
   Param {
     id: rs
     text: "fixedmix/3/Morphing"

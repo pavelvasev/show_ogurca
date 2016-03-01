@@ -1,4 +1,12 @@
 Scene {
+  /* Запуск
+     запустить сцену http://viewlang.ru/code/scene.html?s=https://github.com/pavelvasev/show_ogurca/blob/master/1-structur/phone-manage.vl
+     включить галочку OSC. произойдет сувязь с viewlang.ru:8081 osc сервером
+     запустить андроид приложение https://play.google.com/store/apps/details?id=com.charlieroberts.Control&feature=search_result
+     прописать в нем адрес Host: viewlang.ru, Port: 7400
+     запустить интерфейс Акселерометр
+  */
+
   Param {
     id: rs
     text: "fixedmix/3/Morphing"
