@@ -1,0 +1,38 @@
+Scene {
+  Param {
+    id: rs
+    text: "fixedmix/3/Morphing"
+    guid: "fixedmix/3/Morphing"
+    min: 0.1
+    step: 0.01
+    value: 1
+    max: 1
+  }
+
+  property var acc: [0,0,0]
+  onAccChanged: {
+    var q = 1 - acc[0] / 120;
+    if (q<0) q=0; q = q*1.1;
+    // теперь q 0..1
+    rs.value = q;
+    rp.value = (acc[1] * 1.3) - 50;
+  }
+
+  ParamAnimation {
+    name: "/accelerometer"
+    property: "acc"
+    target: parent
+  }
+
+  Param {
+    id: rp
+    text: "fixedmix/Distort-ZPoint-Center"
+    guid: "fixedmix/Distort-ZPoint-Center"
+    min: -50
+    max: 150
+    step: 0.01
+    value: 1
+  }
+  
+
+}

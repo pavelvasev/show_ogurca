@@ -5,8 +5,8 @@ OgurecCreative {
 
   DistortMixer {
     id: mix
+    // ctag: "left"
   }
 
   shader: mix.shader
-
 }
